@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      margin: 0;
+      color: hsl(215, 51%, 70%);
+      font-family: 'Lato', sans-serif;
+
+    }
+    .attribution { font-size: 11px; 
+      text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .card--container{
+      width: 100%;
+      height: 100vh;
+      background-color:hsl(217, 54%, 11%);
+    }
+
+    
+    .card--image>img{
+      border-radius: 2rem;
+      width: 100%;
+      
+    }
+
+    .card--image{
+      margin: 0 0 0rem 0;
+    }
+
+    .card--image{
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    .image-hover{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      
+      opacity: 0;
+      border-radius: 2rem;
+      top: 0;
+      left: 0;
+      transition: 0.3s all;
+    }
+
+    .image-hover:hover{
+      display: grid;
+      place-items: center;
+      opacity: 1;
+      background-color: hsl(178, 100%, 50%, 50%);
+      z-index: 10;
+    }
+
+    .image-hover>img{
+      width: 5rem;;
+    }
+
+    .card--image>img:hover{
+      filter: opacity(0.5);
+    }
+
+    .card--content>h3{
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    .card--content>h3:hover{
+      color:hsl(178, 100%, 50%);
+    }
+    
+    .card--content>p{
+      font-size: 1.15rem;
+    }
+
+    .card{
+      background-color: hsl(216, 50%, 16%);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      width: 20rem;
+      padding: 2rem;
+      border-radius: 2rem;
+      display: flex;
+      flex-direction: column;
+      font-weight: 300;
+      box-shadow: 1px 30px 20px 10px hsla(0, 0%, 0%, 0.389);
+
+    }
+
+    .eth--days>ul{
+      list-style: none;
+      display: flex;
+      justify-content:space-between;
+      padding: 0 0 1rem 0;
+      border-bottom: 2px hsl(215, 32%, 27%) solid;
+    }
+
+    .card--creator{
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+    }
+    .card--creator>img{
+      width:3rem;
+      padding-right:1rem;
+    }
+    .bold{
+      padding-left: .5rem;;
+      font-weight: 600;
+    }
+    .white{
+      color:hsl(0, 0%, 100%);
+    }
+    .white:hover{
+      color: hsl(178, 100%, 50%);
+      cursor: pointer;
+    }
+
+    .cyan{
+      color: hsl(178, 100%, 50%);
+    }
+
+    @media only screen and (max-width: 400px){
+      .card{
+        padding: 1.5rem;
+        width: 80%;
+        font-size: 1rem;
+      }
+
+      .card--creator{
+      font-size: 1rem
+    }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card--container">
+    <div class="card">
+      <div class = "card--image">
+        <img src="images/image-equilibrium.jpg" alt="">
+        <div class="image-hover"><img src="images/icon-view.svg" alt=""></div>
+      </div>
+      <div class = "card--content">
+
+        <h3 class="white">Equilibrium #3429</h3>
+
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+      
+        <div class="eth--days">
+          <ul>
+            <li><a class="cyan"> <img src="images\icon-ethereum.svg" alt=""> 0.041 ETH</a></li>
+            <li>3 days left</li>
+          </ul>
+        </div>
+        
+        <div class = "card--creator">
+          <img src="images/image-avatar.png">Creation of <span class="bold white">Jules Wyvern</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Sri Varmaa V</a>.
+    </div>
+  </div>
+
+
+  
+
+
+  
+</body>
+</html>
